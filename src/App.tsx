@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./assets/svg/logo.svg";
+import Button from "@mui/material/Button";
+import "./App.css";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         >
           Learn React
         </a>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <br />
+        <Button variant="contained">你好，世界</Button>
       </header>
     </div>
   );

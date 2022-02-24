@@ -16,7 +16,7 @@ function createWindow() {
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${__dirname}/../build/index.html`);
   // 开启 开发者工具
   mainWindow.openDevTools()
-  // win.loadURL('https://github.com')
+  // mainWindow.loadURL('https://github.com')
 
   mainWindow.on('closed', () => {
     mainWindow = null;
