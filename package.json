@@ -35,6 +35,7 @@
     "build": "craco build",
     "test": "craco test --coverage",
     "eject": "react-scripts eject",
+    "qiniu": "cd ./qiniu && yarn run start",
     "run:electron": "concurrently \"chcp 65001 && yarn start:react\" \"yarn start:electron\"",
     "start:react": "cross-env BROWSER=none react-scripts start",
     "start:electron": "wait-on http://localhost:3000 && electron .",
