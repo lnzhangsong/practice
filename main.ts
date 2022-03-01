@@ -3,6 +3,7 @@ const {
   BrowserWindow // 创建原生浏览器窗口的模块
 } = require('electron')
 const isDev = require('electron-is-dev');
+const path = require('path');
 
 
 function createWindow() {
@@ -10,13 +11,19 @@ function createWindow() {
   let mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: {
+      preload: path.join(__dirname, 'electron/preload.ts')
+    }
   })
+
+  console.log(__dirname);
 
   // 加载 页面内容
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${__dirname}/../build/index.html`);
   // 开启 开发者工具
   mainWindow.openDevTools()
   // mainWindow.loadURL('https://github.com')
+  
 
   mainWindow.on('closed', () => {
     mainWindow = null;
