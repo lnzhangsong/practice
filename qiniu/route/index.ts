@@ -7,7 +7,8 @@ const router = new Router();
 
 router.get("/test", async (ctx: Context) => {
   const res = await getBunketList({
-    limit: 10,
+    limit: 0,
+    prefix: '',
   })
   ctx.body = res.respBody;
 })
