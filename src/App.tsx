@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, useRoutes } from "react-router-dom";
+import { HashRouter, useRoutes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import routes from "./routes/index";
 import "./App.scss";
@@ -12,9 +12,9 @@ function AppWrapper() {
 const App = () => {
   return (
     <ChakraProvider>
-      <BrowserRouter>
+      <HashRouter>
         <AppWrapper />
-      </BrowserRouter>
+      </HashRouter>
     </ChakraProvider>
   );
 };
