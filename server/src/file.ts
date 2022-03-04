@@ -24,7 +24,6 @@ interface IOptions {
  */
 const getBunketList = (options: IOptions): Promise<{ respBody: any, respInfo: any }> => {
   return new Promise((resolve, reject) => {
-    // tslint:disable-next-line:ter-prefer-arrow-callback
     bucketManager.listPrefix(bucket, options, function (err: any, respBody: any, respInfo: any) {
       if (err) {
         reject(err);

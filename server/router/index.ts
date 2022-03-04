@@ -5,7 +5,7 @@ import { getBunketList } from '../src/file'
 
 const router = new Router();
 
-router.get("/test", async (ctx: Context) => {
+router.get("/hello", async (ctx: Context) => {
   const res = await getBunketList({
     limit: 0,
     prefix: '',

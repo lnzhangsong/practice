@@ -1,5 +1,5 @@
 import Koa, { Context } from "koa";
-import router from "./route";
+import router from "./router";
 
 const app: Koa = new Koa();
 
