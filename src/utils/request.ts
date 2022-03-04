@@ -1,12 +1,12 @@
 import axios from "axios";
 
 const base_api = (process.env.RUNTIME_ENV = "electron"
-  ? "http://localhost:3000"
+  ? "http://localhost:10086"
   : "/.netlify/functions");
 
 const service = axios.create({
   baseURL: base_api,
-  timeout: 2 * 1000,
+  timeout: 4 * 1000,
 });
 
 // 添加请求拦截器

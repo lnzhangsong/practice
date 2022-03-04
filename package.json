@@ -10,6 +10,7 @@
     "@craco/craco": "^6.4.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@koa/cors": "^3.1.0",
     "@netlify/functions": "^1.0.0",
     "@reduxjs/toolkit": "^1.7.2",
     "@testing-library/jest-dom": "^5.14.1",
