@@ -35,6 +35,9 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
+      - run:
+          name: Run tests
+          command: yarn test --watchAll=false 
       - codecov/upload:
           file: clover.xml 
           token: CODECOV_TOKEN 
