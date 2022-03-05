@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Run tests
           command: yarn test --watchAll=false 
-  example-job:
+  codecov-job:
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
@@ -54,6 +54,6 @@ workflows:
       # - node/test
   upload-to-codecov:
     jobs:
-      - node/test:
+      - build-and-test:
           post-steps:
             - codecov/upload
