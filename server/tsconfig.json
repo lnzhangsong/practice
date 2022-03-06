@@ -4,11 +4,11 @@
     "module": "commonjs",
     "lib": ["es2017"],
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "./",
     "noImplicitAny": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true
   },
-  "include": ["src", "route", "app.ts"]
+  "include": ["src", "router", "app.ts"]
 }

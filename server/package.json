@@ -1,7 +1,7 @@
 {
-  "name": "qiniu",
+  "name": "oss_server",
   "version": "1.0.0",
-  "description": "qiniu api",
+  "description": "oss api",
   "main": "app.ts",
   "scripts": {
     "lint": "tslint --project tsconfig.json --format stylish",
@@ -12,10 +12,15 @@
   "license": "MIT",
   "dependencies": {
     "@types/koa": "^2.13.4",
+    "@types/koa-logger": "^3.1.2",
+    "@types/koa2-cors": "^2.0.2",
+    "cos-nodejs-sdk-v5": "^2.11.6",
     "http-status-codes": "^2.2.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
-    "koa-router": "^10.1.1"
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1",
+    "koa2-cors": "^2.0.6"
   },
   "devDependencies": {
     "@types/http-status-codes": "^1.2.0",
