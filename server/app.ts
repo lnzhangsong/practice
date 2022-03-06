@@ -1,5 +1,6 @@
 import Koa, { Context } from "koa";
 import cors from "koa2-cors";
+import Logger from "koa-logger";
 import router from "./router";
 
 const app: Koa = new Koa();
@@ -20,6 +21,10 @@ app.use(cors({
 	allowMethods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS"],
 	allowHeaders: ["Content-Type", "Authorization", "Accept", "X-Requested-With", "X-Custom-Header", "Origin", "Referer", "User-Agent", "Cookie"],
 }));
+
+// logger
+const logger = Logger();
+app.use(logger);
 
 // router
 app.use(router.routes());

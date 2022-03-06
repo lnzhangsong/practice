@@ -1,14 +1,11 @@
 import { Handler } from "@netlify/functions";
-import { getBunketList } from "../../server/src/file"
+import { getBunketList } from "../../server/src/bucket"
 
-const handler: Handler = async (event, context) => {
-  const res = await getBunketList({
-    limit: 0,
-    prefix: '',
-  })
+const handler: Handler = async () => {
+  const res = await getBunketList()
   return {
     statusCode: 200,
-    body: JSON.stringify(res.respBody),
+    body: JSON.stringify(res.Buckets),
   };
 };
 
