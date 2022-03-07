@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { useRequest } from "ahooks";
 import { Tabs, TabPane } from "@douyinfe/semi-ui";
 
+import { retry as promiseRetry } from "@/utils/selfPromise";
+
 import PageTable from "./components/PageTable";
 
 import { getList } from "../../api/buncket";
 
 function Home() {
-  const { data } = useRequest(getList);
+  const { data } = useRequest(() => promiseRetry(getList, 3, "网络错误"));
   const [list, setList] = useState([]);
 
   useEffect(() => {

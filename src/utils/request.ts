@@ -1,7 +1,5 @@
 import axios from "axios";
 
-console.log(process.env.REACT_APP_RUNTIME_ENV);
-
 const base_api =
   process.env.REACT_APP_RUNTIME_ENV === "electron"
     ? "http://localhost:10086"
@@ -39,3 +37,5 @@ service.interceptors.response.use(
 );
 
 export default service;
+
+//# sourceMappingURL=request.js.map
