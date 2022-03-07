@@ -19,6 +19,7 @@
     "@vercel/node": "^1.13.0",
     "ahooks": "^3.1.13",
     "axios": "^0.26.0",
+    "cos-nodejs-sdk-v5": "^2.11.6",
     "electron-is-dev": "^2.0.0",
     "node-sass": "^7.0.1",
     "prettier": "^2.5.1",
