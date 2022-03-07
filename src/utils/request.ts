@@ -1,8 +1,11 @@
 import axios from "axios";
 
-const base_api = (process.env.RUNTIME_ENV = "electron"
-  ? "http://localhost:10086"
-  : "/.netlify/functions");
+console.log(process.env.REACT_APP_RUNTIME_ENV);
+
+const base_api =
+  process.env.REACT_APP_RUNTIME_ENV === "electron"
+    ? "http://localhost:10086"
+    : "/api";
 
 const service = axios.create({
   baseURL: base_api,
