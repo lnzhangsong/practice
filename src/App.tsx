@@ -8,12 +8,11 @@ function AppWrapper() {
   return elements;
 }
 
-const App = () => {
-  return (
-    <HashRouter>
-      <AppWrapper />
-    </HashRouter>
-  );
-};
+const App = () =>
+(
+  <HashRouter>
+    <AppWrapper />
+  </HashRouter>
+);
 
 export default App;

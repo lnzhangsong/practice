@@ -46,6 +46,7 @@
     "start:none_brower": "cross-env BROWSER=none react-scripts start",
     "electron:start": "wait-on http://localhost:3000 && electron .",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:fix": "eslint --fix",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
     "cz": "git-cz"

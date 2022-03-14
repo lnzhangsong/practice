@@ -21,6 +21,8 @@
     "import/extensions": ["error", "never"],
     "no-tabs": ["error", { "allowIndentationTabs": true }],
     "no-unused-expressions": ["error", { "allowTernary": true }],
-    "indent": ["error", "tab"]
+    "indent": ["off", 2],
+    "implicit-arrow-linebreak": ["error", "below"],
+    "linebreak-style": ["error", "windows"]
   }
 }

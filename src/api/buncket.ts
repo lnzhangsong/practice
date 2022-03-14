@@ -4,4 +4,4 @@ function getList(): Promise<any> {
   return request.get("/getBunketList");
 }
 
-export { getList };
+export default getList;
