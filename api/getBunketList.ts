@@ -1,9 +1,8 @@
-import { getBunketList } from "../server/src/bucket"
-
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from "@vercel/node";
+import { getBunketList } from "../server/src/bucket";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (request: VercelRequest, response: VercelResponse) => {
-  const res = await getBunketList()
+  const res = await getBunketList();
   response.status(200).send(res.Buckets);
 };

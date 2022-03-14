@@ -23,6 +23,8 @@
     "no-unused-expressions": ["error", { "allowTernary": true }],
     "indent": ["off", 2],
     "implicit-arrow-linebreak": ["error", "below"],
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error", "windows"],
+    "arrow-body-style": ["error", "always"],
+    "import/no-relative-packages": ["off"]
   }
 }

@@ -4,12 +4,13 @@ import { Notification } from "@douyinfe/semi-ui";
  * 重试辅助函数 Fn1-part1
  * @returns {Promise<any>}
  */
-const retryHelper = (): Promise<any> =>
-  new Promise<void>((resolve) => {
+const retryHelper = (): Promise<any> => {
+  return new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
     }, 1000);
   });
+};
 /**
  * 重试函数 Fn1-part2
  * @param fn 需要重试函数
@@ -21,8 +22,8 @@ const retry = (
   fn: Function,
   retryTimes: number = 3,
   info: string = "信息",
-): Promise<any> =>
-  new Promise((resolve, reject) => {
+): Promise<any> => {
+  return new Promise((resolve, reject) => {
     let retryCount = 0;
     const retryFn = () => {
       fn()
@@ -44,5 +45,6 @@ const retry = (
     };
     retryFn();
   });
+};
 
 export default retry;
