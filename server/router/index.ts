@@ -1,13 +1,7 @@
-import { Context } from "koa";
-import Router from "koa-router";
+import combineRouters from "koa-combine-routers";
 
-import { getBunketList } from "../src/bucket";
+import bunketRouter from "./bunketRouter";
 
-const router = new Router();
-
-router.get("/getBunketList", async (ctx: Context) => {
-	const res = await getBunketList({ Region: ctx.query.region });
-	ctx.body = res.Buckets;
-});
+const router = combineRouters(bunketRouter);
 
 export default router;

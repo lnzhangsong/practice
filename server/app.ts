@@ -1,7 +1,7 @@
 import Koa, { Context } from "koa";
 import cors from "koa2-cors";
 import Logger from "koa-logger";
-import router from "./router";
+import router from "./router/index";
 
 const app: Koa = new Koa();
 
@@ -27,12 +27,7 @@ const logger = Logger();
 app.use(logger);
 
 // router
-app.use(router.routes());
-app.use(router.allowedMethods({
-  throw: true, // 抛出错误，代替设置响应头状态
-  notImplemented: () => { return "不支持当前请求所需要的功能"; },
-	methodNotAllowed: () => { return "不支持的请求方式"; },
-}));
+app.use(router);
 
 // Application error logging.
 app.on("error", console.error);
