@@ -1,6 +1,9 @@
 import Koa, { Context } from "koa";
 import cors from "koa2-cors";
 import Logger from "koa-logger";
+import bodyParse from "koa-bodyparser";
+import body from "koa-body";
+
 import router from "./router/index";
 
 const app: Koa = new Koa();
@@ -26,8 +29,13 @@ app.use(cors({
 const logger = Logger();
 app.use(logger);
 
+// resolve body
+// notice middleware order
+app.use(body());
+app.use(bodyParse());
+
 // router
-app.use(router);
+app.use(router());
 
 // Application error logging.
 app.on("error", console.error);

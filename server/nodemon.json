@@ -1,5 +1,5 @@
 {
-  "watch": ["src", "route", "app.ts"],
+  "watch": ["src", "router", "app.ts"],
   "exec": "npm run serve",
   "ext": "ts"
 }

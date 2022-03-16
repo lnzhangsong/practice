@@ -22,9 +22,9 @@
     "no-tabs": ["error", { "allowIndentationTabs": true }],
     "no-unused-expressions": ["error", { "allowTernary": true }],
     "indent": ["off", 2],
-    "implicit-arrow-linebreak": ["error", "below"],
+    "implicit-arrow-linebreak": ["off"],
     "linebreak-style": ["error", "windows"],
-    "arrow-body-style": ["error", "always"],
+    "arrow-body-style": ["off"],
     "import/no-relative-packages": ["off"]
   }
 }

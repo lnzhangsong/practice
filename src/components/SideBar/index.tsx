@@ -23,14 +23,10 @@ function SideBar(props: IProps) {
       </header>
       <section className="h-full">
         <div className="h-full mx-2 p-2 flex flex-col border rounded-lg space-y-2.5">
-          <Button onClick={() =>
-nav("home")}>所有文件</Button>
-          <Button onClick={() =>
-nav("last_used")}>近期使用</Button>
-          <Button onClick={() =>
-nav("manage")}>同步任务</Button>
-          <Button onClick={() =>
-nav("analysis")}>用量分析</Button>
+          <Button onClick={() => nav("home")}>所有文件</Button>
+          <Button onClick={() => nav("last_used")}>近期使用</Button>
+          <Button onClick={() => nav("manage")}>同步任务</Button>
+          <Button onClick={() => nav("analysis")}>用量分析</Button>
         </div>
       </section>
       <footer>
