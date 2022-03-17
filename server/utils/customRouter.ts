@@ -2,8 +2,9 @@ import Router from "koa-router";
 
 const router = new Router();
 
-// 添加前缀
-router.prefix("/api");
+// add prefix
+// conflict with serverless,(same name)
+// router.prefix("/api");
 
 // 修改错误默认显示
 router.allowedMethods({

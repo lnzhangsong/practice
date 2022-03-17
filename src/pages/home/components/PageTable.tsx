@@ -16,8 +16,7 @@ const columns: any[] = [
         | React.ReactPortal
         | null
         | undefined,
-    ) =>
-(
+    ) => (
       <div>
         <Avatar
           size="small"
@@ -44,29 +43,14 @@ const columns: any[] = [
   {
     title: "大小",
     dataIndex: "size",
-    sorter: (a: { size: number }, b: { size: number }) =>
-      (a.size - b.size > 0 ? 1 : -1),
-    render: (text: any) =>
-`${text} KB`,
-  },
-  {
-    title: "所有者",
-    dataIndex: "owner",
-    render: (text: {} | null | undefined) =>
-(
-      <div>
-        <Avatar size="small" style={{ marginRight: 4 }}>
-          {typeof text === "string" && text.slice(0, 1)}
-        </Avatar>
-        {text}
-      </div>
-    ),
+    sorter: (a: { size: number }, b: { size: number }) => a.size - b.size,
+    render: (text: String) => `${text} Byte`,
   },
   {
     title: "更新日期",
     dataIndex: "updateTime",
     sorter: (a: { updateTime: number }, b: { updateTime: number }) =>
-      (a.updateTime - b.updateTime > 0 ? 1 : -1),
+      a.updateTime - b.updateTime,
     render: (value: string | number | Date) =>
       dateFns.format(new Date(value), "yyyy-MM-dd"),
   },
@@ -78,8 +62,7 @@ function App() {
   const [dataSource, setData] = useState([]);
 
   const pagination = useMemo(
-    () =>
-({
+    () => ({
       pageSize: 15,
       pageSizeOpts: [15, 30, 60, 100],
       showQuickJumper: true,
@@ -88,11 +71,9 @@ function App() {
     [],
   );
   const rowSelection = useMemo(
-    () =>
-({
+    () => ({
       width: 100,
-      getCheckboxProps: (record: { name: string }) =>
-({
+      getCheckboxProps: (record: { name: string }) => ({
         disabled: record.name === "Michael James", // Column configuration not to be checked
         name: record.name,
       }),
@@ -100,8 +81,7 @@ function App() {
     [],
   );
 
-  const scroll = useMemo(() =>
-({ y: window.innerHeight - 180 }), []);
+  const scroll = useMemo(() => ({ y: window.innerHeight - 180 }), []);
 
   const getData = (): any => {
     const data = [];
@@ -113,7 +93,6 @@ function App() {
         name: isSemiDesign
           ? `Semi Design 设计稿${i}.fig`
           : `Semi Pro 设计稿${i}.fig`,
-        owner: isSemiDesign ? "姜鹏志" : "郝宣",
         size: randomNumber,
         updateTime: new Date().valueOf() + randomNumber * DAY,
         avatarBg: isSemiDesign ? "grey" : "red",

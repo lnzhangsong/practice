@@ -1,7 +1,7 @@
 import request from "../utils/request";
 
 function getList(): Promise<any> {
-  return request.get("/getBunketList");
+  return request.get("/bunketList");
 }
 
 export default getList;
