@@ -2,15 +2,12 @@ import { useEffect, useState } from "react";
 import { useRequest } from "ahooks";
 import { Tabs, TabPane } from "@douyinfe/semi-ui";
 
-import promiseRetry from "../../utils/selfPromise";
-
 import PageTable from "./components/PageTable";
 
 import getList from "../../api/buncket";
 
 function Home() {
-  const { data } = useRequest(() =>
-promiseRetry(getList, 3, "网络错误"));
+  const { data } = useRequest(getList);
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -21,8 +18,7 @@ promiseRetry(getList, 3, "网络错误"));
   return (
     <>
       <Tabs type="button" className="h-full flex flex-1 flex-col">
-        {list.map((item: any) =>
-(
+        {list.map((item: any) => (
           <TabPane
             key={item.Name}
             tab={item.Name.substring(0, item.Name.indexOf("-"))}

@@ -1,5 +1,5 @@
 interface IListObjectRequest {
-  Bucket: string,
+  Bunket: string,
   Region: string,
   Prefix?: string,
   Delimiter?: string,
