@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseApi = process.env.REACT_APP_RUNTIME_ENV === "electron"
   ? "http://localhost:10000"
-  : "/api";
+  : "/";
 
 const service = axios.create({
   baseURL: baseApi,

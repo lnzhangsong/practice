@@ -25,10 +25,9 @@
     "koa2-cors": "^2.0.6"
   },
   "devDependencies": {
-    "@types/http-status-codes": "^1.2.0",
     "@types/koa-bodyparser": "^4.3.5",
     "@types/koa-router": "^7.4.4",
-    "@types/node": "^17.0.21",
+    "@types/node": "^17.0.36",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
