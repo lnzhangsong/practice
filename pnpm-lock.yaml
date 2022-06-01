@@ -5,10 +5,13 @@ importers:
   .:
     specifiers:
       '@vercel/node': ^1.15.4
+      git-cz: ^4.9.0
       webpack: ^5.0.0
     dependencies:
       '@vercel/node': registry.npmmirror.com/@vercel/node/1.15.4
       webpack: registry.npmmirror.com/webpack/5.72.1
+    devDependencies:
+      git-cz: 4.9.0
 
   packages/app:
     specifiers:
@@ -174,6 +177,11 @@ importers:
       typescript: registry.npmmirror.com/typescript/4.7.2
 
 packages:
+
+  /git-cz/4.9.0:
+    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==}
+    hasBin: true
+    dev: true
 
   registry.npmmirror.com/@ampproject/remapping/2.2.0:
     resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@ampproject/remapping/-/remapping-2.2.0.tgz}

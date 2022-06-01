@@ -4,12 +4,21 @@
   "scripts": {
     "start:render": "pnpm --filter render start",
     "start:app": "pnpm --filter app start",
-    "build:serverless": "pnpm --filter render build:serverless"
+    "build:serverless": "pnpm --filter render build:serverless",
+    "cz": "git-cz"
   },
   "license": "ISC",
   "private": true,
   "dependencies": {
     "@vercel/node": "^1.15.4",
     "webpack": "^5.0.0"
+  },
+  "devDependencies": {
+    "git-cz": "^4.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }
