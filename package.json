@@ -9,6 +9,7 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "@vercel/node": "^1.15.4"
+    "@vercel/node": "^1.15.4",
+    "webpack": "^5.0.0"
   }
 }
