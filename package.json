@@ -4,6 +4,7 @@
   "scripts": {
     "start:render": "pnpm --filter render start",
     "start:app": "pnpm --filter app start",
+    "start:service": "pnpm --filter service start",
     "build:serverless": "pnpm --filter render build:serverless",
     "cz": "git-cz"
   },
