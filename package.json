@@ -1,25 +1,23 @@
 {
-  "name": "pratice",
-  "version": "1.0.0",
-  "scripts": {
-    "start:render": "pnpm --filter render start",
-    "start:app": "pnpm --filter app start",
-    "start:service": "pnpm --filter service start",
-    "build:serverless": "pnpm --filter render build:serverless",
-    "cz": "git-cz"
-  },
-  "license": "ISC",
+  "name": "tauri-app",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
   "dependencies": {
-    "@vercel/node": "^1.15.4",
-    "webpack": "^5.0.0"
+    "@tauri-apps/api": "^1.0.2",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "git-cz": "^4.9.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
+    "@tauri-apps/cli": "^1.0.5",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4"
   }
 }
