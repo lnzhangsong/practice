@@ -1,25 +1,25 @@
 {
-  "name": "pratice",
-  "version": "1.0.0",
-  "scripts": {
-    "start:render": "pnpm --filter render start",
-    "start:app": "pnpm --filter app start",
-    "start:service": "pnpm --filter service start",
-    "build:serverless": "pnpm --filter render build:serverless",
-    "cz": "git-cz"
-  },
-  "license": "ISC",
+  "name": "tauri-app",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
   "dependencies": {
-    "@vercel/node": "^1.15.4",
-    "webpack": "^5.0.0"
+    "@tauri-apps/api": "^1.0.2",
+    "@types/fabric": "^4.5.11",
+    "@vueuse/core": "^8.9.4",
+    "@vueuse/nuxt": "^8.9.4",
+    "nuxt": "3.0.0-rc.6"
   },
   "devDependencies": {
-    "git-cz": "^4.9.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
+    "@tauri-apps/cli": "^1.0.5",
+    "fabric": "^5.2.1",
+    "sass": "^1.54.0"
   }
 }
